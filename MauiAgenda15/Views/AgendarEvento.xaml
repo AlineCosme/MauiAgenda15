@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAgenda15.Views.AgendarEvento"
+             Title="AgendarEvento"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black"> 
+
+    <ScrollView> 
+
+        <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+            <Label Text="Agendar evento"    
+
+               HorizontalTextAlignment="Center"
+               FontSize="40" TextColor="White"/> 
+
+ 
+
+            <Frame Padding="10" BackgroundColor="#FFEDF0ED">
+
+                <VerticalStackLayout> 
+
+                    <Frame Margin="10">
+                        <VerticalStackLayout>
+                            <Label Text="Nome do Evento:" FontSize="15" />
+                            <Entry x:Name="nome_evento" Placeholder=""/> 
+
+                        </VerticalStackLayout> 
+
+                    </Frame>  
+
+                    <Frame Padding="10" Margin="5">
+                        <VerticalStackLayout> 
+
+ 
+
+                            <Label Text="Período:" FontSize="15" Margin="5"/> 
+
+                            <HorizontalStackLayout> 
+                                <Label Text="Data de início:" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                <DatePicker x:Name="dtpck_inicio" Format="dd/MM/yyyy" /> 
+
+                            </HorizontalStackLayout> 
+
+ 
+
+                            <HorizontalStackLayout> 
+                                <Label Text="Data de término:" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                <DatePicker x:Name="dtpck_termino" Format="dd/MM/yyyy" /> 
+
+                            </HorizontalStackLayout> 
+
+ 
+
+                        </VerticalStackLayout> 
+
+                    </Frame> 
+
+ 
+
+                    <Frame Margin="10">
+                        <VerticalStackLayout>
+                            <Label Text="Quantidade de participantes:" FontSize="15" />
+                            <Entry x:Name="qnt_Participantes" Placeholder=""/> 
+
+                        </VerticalStackLayout> 
+
+                    </Frame> 
+
+ 
+
+                    <Frame Margin="10"> 
+                        <VerticalStackLayout>
+                            <Label Text="Local do Evento:" FontSize="15" /> 
+                            <Entry x:Name="local_evento" Placeholder=""/> 
+
+                        </VerticalStackLayout> 
+
+                    </Frame> 
+
+ 
+
+                    <Frame Margin="10"> 
+
+                        <VerticalStackLayout>
+                            <Label Text="Valor por participante (R$):" FontSize="15" />
+                            <Entry x:Name="valor_participante" Placeholder=""/>
+                        </VerticalStackLayout>
+                    </Frame> 
+
+ 
+
+                </VerticalStackLayout>
+            </Frame> 
+
+            <Button Text="Avançar"
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"/>
+        
+               
+                </VerticalStackLayout>
+    </ScrollView> 
+</ContentPage>
